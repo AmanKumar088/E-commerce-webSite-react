@@ -1,0 +1,183 @@
+.containe{
+    width:100%;
+    height:auto;
+    /* background-color: aqua; */
+    box-sizing: border-box;
+    padding:1vh 0vh;
+}
+.containe > .row1{
+    width:90%;
+    height:auto;
+    /* background-color:red; */
+    margin:auto;
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+}
+.containe > .row1 > .grocery-div{
+    width:10%;
+    height:auto;
+    /* background-color:rgb(7, 24, 203); */
+}
+.containe > .row1 > .moblie-div{
+    width:10%;
+    height:auto;
+    /* background-color:rgb(23, 22, 22); */
+}
+.containe > .row1 > .fashion-div{
+    width:10%;
+    height:auto;
+    /* background-color:rgb(11, 180, 2); */
+}
+.containe > .row1 > .eletronis-div{
+    width:10%;
+    height:auto;
+    /* background-color:rgb(7, 24, 203); */
+}
+.containe > .row1 > .home-div{
+    width:12%;
+    height:auto;
+    /* background-color:rgb(8, 180, 237); */
+}
+.containe > .row1 > .appliances-div{
+    width:12%;
+    height:auto;
+    /* background-color:rgb(7, 24, 203); */
+}
+.containe > .row1 > .travel-div{
+    width:10%;
+    height:auto;
+    /* background-color:pink; */
+}
+.containe > .row1 > .beauty-toy-div{
+    width:14%;
+    height:auto;
+    /* background-color:grey; */
+}
+.containe > .row1 > .two-wheelers-div{
+    width:12%;
+    height:auto;
+    /* background-color:yellow; */
+}
+
+
+
+.product{
+    width:100%;
+    height:auto;
+    /* background-color: red; */
+    padding:5vh;
+    box-sizing: border-box;
+    padding:10px; 
+}
+.product > .row1{
+    width:90%;
+    height:auto;
+    margin: auto;
+    padding:15px 15px;
+    background-color:#fff;
+    box-shadow:2px 4px 4px grey;
+}
+.product > .row1 > .Best-div{
+    width:100%;
+    height:auto;
+    margin: auto;
+    padding:5px 10px;
+    /* background-color:rgb(13, 186, 13); */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    
+}
+.product > .row1 > .Best-div > .heading-div{
+    width:50%;
+    /* background-color: aqua; */
+
+}
+.product > .row1 > .Best-div > .right-div{
+    width:6%;
+    padding:5px 10px;
+    /* background-color:rgb(12, 34, 225); */
+    /* display: flex; */
+    
+}
+.product > .row1 > .flex-div{
+    width:100%;
+    height:auto;
+    padding:10px 15px;
+    /* background-color: rgb(48, 233, 11); */
+
+}
+.product > .row1 > .flex-div > .product-div{
+    width:18%;
+    height:auto;
+    padding:10px 10px;
+    margin:10px 10px;
+    /* background-color: brown; */
+    display: inline-block;
+}
+
+/* single product desing */
+
+.conatin {
+    width:100%;
+    height: auto;
+    /* background-color: aqua; */
+    box-sizing: border-box;
+    border-width: 0px;
+    box-sizing: border-box;
+   border-style: dotted;
+    box-shadow:1px 1px 2px grey;
+    border-radius:10px;
+    text-align: center;
+    text-decoration: none;
+    color: #333;
+}
+
+.conatin>.row {
+    width:100%;
+    height: auto;
+    margin: auto;
+    /* background-color: yellow; */
+    padding:1px 0px;
+    box-sizing: border-box;
+    white-space: nowrap;
+    overflow-wrap: normal;
+    max-width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-align: center;
+    
+}
+
+.conatin>.row .imgclass {
+    width: 100%;
+    margin: auto;
+    display: block;
+    inset: 0px;
+    padding: inherit;
+    object-fit: contain;
+    opacity: 1;
+    margin:1vh;
+}
+
+.product-name {
+    width:100%;
+    height: auto;
+    margin: auto;
+    /* background-color: rgb(0, 64, 255); */
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+
+.product-price {
+    width:100%;
+    height: auto;
+    margin: auto;
+    /* background-color: rgb(238, 0, 255); */
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
