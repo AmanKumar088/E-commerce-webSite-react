@@ -1,4 +1,8 @@
 export const Route={
     GetAllProduct:"/product/all",
-    SingleProduct:"/product/single/"
+    SingleProduct:"/product/single/",
+    SignupUser:"/admin/signup",
+    LoginUser:"/admin/login",
+    AddCart:"/cart/addcart",
+    GetCart:"/cart/joincart"
 }

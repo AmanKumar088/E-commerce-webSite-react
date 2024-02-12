@@ -23,3 +23,16 @@ export async function SingleProductApi(id){
     return await response.json()
 
 }
+
+
+export async function CartApi(){
+    const res=await fetch(`http://localhost:200/cart/addcart`,{
+        method:"post",
+        headers:{
+            "content-type":"application/json"
+        },
+        body:JSON.stringify()
+    })
+    return await res.json()
+
+}

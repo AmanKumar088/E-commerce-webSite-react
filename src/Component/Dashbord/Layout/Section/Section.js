@@ -12,6 +12,7 @@ export default function Section() {
     const getData = async () => {
         const res = await GetAllProductApi()
         setData(...data, res.data)
+        console.log(res)
     }
 
     useEffect(() => {
@@ -25,7 +26,7 @@ export default function Section() {
             <div className='containe'>
                 <div className='row1'>
                     <div className='grocery-div'>
-                        <Link style={{ textDecoration: "none" }}>
+                        <Link style={{ textDecoration: "none" }} to="/google">
                             <img src={`${PublicImg}google.jpeg`} width={100} height={90}></img>
                             <h4 style={{ color: "black" }}>Google</h4>
                         </Link>
@@ -33,28 +34,28 @@ export default function Section() {
 
 
                     <div className='moblie-div'>
-                        <Link style={{ textDecoration: "none" }}>
+                        <Link style={{ textDecoration: "none" }} to="/nokia">
                             <img src={`${PublicImg}Nokia.jpeg`} width={100} height={90}></img>
                             <h4 style={{ color: "black" }}>Nokia</h4>
                         </Link>
                     </div>
 
                     <div className='fashion-div'>
-                        <Link style={{ textDecoration: "none" }}>
+                        <Link style={{ textDecoration: "none" }} to="/oneplus">
                             <img src={`${PublicImg}oneplus.webp`} width={100} height={90}></img>
                             <h4 style={{ color: "black" }}>One plus</h4>
                         </Link>
                     </div>
 
                     <div className='eletronis-div'>
-                        <Link style={{ textDecoration: "none" }}>
+                        <Link style={{ textDecoration: "none" }} to="/samsung">
                             <img src={`${PublicImg}sumsung.jpeg`} width={100} height={90}></img>
                             <h4 style={{ color: "black" }}>Samsung</h4>
                         </Link>
                     </div>
 
                     <div className='home-div'>
-                        <Link style={{ textDecoration: "none" }}>
+                        <Link style={{ textDecoration: "none" }} to="/vivo">
                             <img src={`${PublicImg}vivo.webp`} width={100} height={90}></img>
                             <h4 style={{ color: "black" }}>Vivo</h4>
                         </Link>
@@ -62,28 +63,28 @@ export default function Section() {
                     </div>
 
                     <div className='appliances-div'>
-                        <Link style={{ textDecoration: "none" }}>
+                        <Link style={{ textDecoration: "none" }} to="/realme">
                             <img src={`${PublicImg}realme.jpg`} width={100} height={90}></img>
                             <h4 style={{ color: "black" }}>Realme</h4>
                         </Link>
                     </div>
 
                     <div className='travel-div'>
-                        <Link style={{ textDecoration: "none" }}>
+                        <Link style={{ textDecoration: "none" }} to="/redmi">
                             <img src={`${PublicImg}redmi.jpeg`} width={100} height={90}></img>
                             <h4 style={{ color: "black" }}>Redmi</h4>
                         </Link>
                     </div>
 
                     <div className='beauty-toy-div'>
-                        <Link style={{ textDecoration: "none" }}>
+                        <Link style={{ textDecoration: "none" }} to="/iphone">
                             <img src={`${PublicImg}iphone.jpeg`} width={100} height={90}></img>
                             <h4 style={{ color: "black" }}>Iphone</h4>
                         </Link>
                     </div>
 
                     <div className='two-wheelers-div'>
-                        <Link style={{ textDecoration: "none" }}>
+                        <Link style={{ textDecoration: "none" }} to="/oppo">
                             <img src={`${PublicImg}oppo.jpg`} width={100} height={90}></img>
                             <h4 style={{ color: "black" }}>oppo</h4>
                         </Link>

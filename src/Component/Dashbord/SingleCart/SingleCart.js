@@ -8,6 +8,7 @@ import { MdLocalOffer } from "react-icons/md";
 import { useEffect, useState } from "react";
 import { SingleProductApi } from "../../../Api/Api";
 import { FcRating } from "react-icons/fc";
+import AddCartApi from "../../../Api/CartApi";
 
 export default function SingleCart() {
     const {id}=useParams()
@@ -15,6 +16,12 @@ export default function SingleCart() {
     const singledata=async ()=>{
         const res=await SingleProductApi(id)
         setData(res.data)
+    }
+
+    const AddCart=async ()=>{
+        const ww=await AddCartApi()
+        
+
     }
     useEffect(()=>{
         singledata()
@@ -30,7 +37,7 @@ export default function SingleCart() {
                             <img src={data.product_img} width={500} height={500}></img>
                         </div>
                         <div className="addcart-div">
-                            <button id="add-btn">AddCart</button>
+                            <button id="add-btn" onClick={AddCart}>AddCart</button>
                         </div>
                         <div className="buy-div">
                             <button id="buy-btn">Buy Now</button>
@@ -38,7 +45,7 @@ export default function SingleCart() {
                     </div>
                     <div className="product-info">
                         <h4>{data.brand_name}</h4>
-                        <h5>15,000 Rating & Reviews</h5>
+                        
                         <h6 style={{ color: "green" }}>Extra <LiaRupeeSignSolid />3000 off</h6>
                         <h3>{data.product_price} <del>43,999</del> <span style={{ color: "green" }}>6% off</span></h3>
                         
@@ -47,6 +54,7 @@ export default function SingleCart() {
                         <h5>{data.operation_version}</h5>
                         <h5>{data.cellular_technology}</h5>
                         <h5>{data.product_color}</h5>
+                        <h5>15,000 Rating & Reviews</h5>
                         <h5 style={{backgroundColor:"green",color:"#fff",borderRadius:"8px",width:"8%",padding:"0px 5px"}}>{data.product_rating}<FcRating/></h5>
                         <h5>Available offers</h5>
                         <p><MdLocalOffer style={{ color: "green" }} />Bank Offer10% off on Canara Bank Credit Card Transactions, up to ₹1,000 on orders of ₹5,000 and aboveT&C</p>
