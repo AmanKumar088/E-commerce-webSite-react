@@ -21,7 +21,7 @@ export default function Header() {
                         <input type='search' className='input-box' placeholder={`Search for Products, Brands and More`}></input>
                     </div>
                     <div className='col-md-5'>
-                        <FaRegCircleUser style={{ width: '24%', height: 'auto' }}/> {Logindata?.data.name}
+                        <FaRegCircleUser style={{ width: '24%', height: 'auto' }}/>{Logindata?.data.name}
                         <div className='loginHideDiv'>
                            <p style={{textAlign:"center",fontSize:"18px",color:"black",lineHeight:"20px"}}><Link to="/login" style={{textDecoration:"none"}}>Login</Link></p>
                            <p style={{textAlign:"center",fontSize:"18px",color:"black",lineHeight:"2px"}}><Link to="/signup" style={{textDecoration:"none",lineHeight:"10px"}}>Signup</Link></p>

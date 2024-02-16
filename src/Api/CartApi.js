@@ -1,14 +1,16 @@
-import { GetToken } from "../Component/Constent/Storage";
+import SetStorage, { GetToken } from "../Component/Constent/Storage";
 import { ApiUrl } from "../Component/Constent/Url";
 import { Route } from "../Component/Route/Route";
 
-export default async function AddCartApi(){
+export default async function AddCartApi(data){
+    console.log(data)
     const res=await fetch(`${ApiUrl}${Route.AddCart}`,{
         method:"post",
         headers:{
-            "content-type":"application/json"
+            "Content-Type":"application/json",
+            "Authorization":`bearer ${GetToken()}`
         },
-        body:JSON.stringify()
+        body:JSON.stringify(data)
     })
     return await res.json()
 }

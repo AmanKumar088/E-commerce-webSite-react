@@ -11,7 +11,7 @@ export default function Section() {
 
     const getData = async () => {
         const res = await GetAllProductApi()
-        setData(...data, res.data)
+        setData(...data, res.data.slice(0,10))
         console.log(res)
     }
 
@@ -130,7 +130,7 @@ export default function Section() {
                     </div>
                     <div className='flex-div'>
             {
-                data.map((value, index, array) => {
+                data?.map((value, index, array) => {
                     return (
                         <>
                             

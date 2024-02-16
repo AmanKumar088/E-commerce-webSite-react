@@ -1,4 +1,4 @@
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import { PublicImg } from "../../Constent/Url";
 import Footer from "../Layout/Footer/Footer";
 import Header from "../Layout/Header/Header";
@@ -9,17 +9,33 @@ import { useEffect, useState } from "react";
 import { SingleProductApi } from "../../../Api/Api";
 import { FcRating } from "react-icons/fc";
 import AddCartApi from "../../../Api/CartApi";
+import { GetStorage } from "../../Constent/Storage";
 
 export default function SingleCart() {
     const {id}=useParams()
     const [data,setData]=useState({})
+    const navigate=useNavigate()
     const singledata=async ()=>{
         const res=await SingleProductApi(id)
         setData(res.data)
     }
 
+
+    const addcart={
+        user_id:GetStorage()?.user_id,
+        product_id:id,
+        product_quantity:""
+    }
     const AddCart=async ()=>{
-        const ww=await AddCartApi()
+        const ww=await AddCartApi(addcart)
+       if(ww.status==="success"){
+        setTimeout(()=>{
+            window.alert("add cart successfully")
+            navigate('/addcart')
+        })
+       }else{
+           navigate('/login')
+       }
         
 
     }

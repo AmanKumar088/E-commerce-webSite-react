@@ -31,7 +31,7 @@ export default function AddCart() {
                                     <div className="cart-div">
                                         <div className="cart-inner-div">
                                             <div className="cart-img">
-                                                <img src={value.product_img} width={150} height={150}></img>
+                                                <img src={value.cartDetails[0].product_img} width={150} height={150}></img>
                                             </div>
                                             <div className="cart-info">
                                                
@@ -52,7 +52,6 @@ export default function AddCart() {
                                                 <h5>REMOVE</h5>
                                             </div>
                                         </div>
-
                                     </div>
                                     <div className="price-div">
                                         <div className="price-details-div">

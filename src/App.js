@@ -38,7 +38,7 @@ function App() {
         <Route path='/vivo' element={<Vivo />}></Route>
         <Route path='/realme' element={<Realme />}></Route>
         <Route path='/redmi' element={<Redmi />}></Route>
-        <Route path='/ihone' element={<Iphone />}></Route>
+        <Route path='/iphone' element={<Iphone />}></Route>
         <Route path='/oppo' element={<Oppo />}></Route>
       </Routes>
       </GetContextData>
