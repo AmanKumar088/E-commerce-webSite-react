@@ -168,3 +168,9 @@
     font-size:20px;
     color: #fff
 }
+#removebtn{
+    background-color: #fff;
+    border: none;
+    font-size:18px;
+    font-weight:600;
+}

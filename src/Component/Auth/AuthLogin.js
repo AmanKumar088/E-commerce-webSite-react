@@ -1,5 +1,6 @@
 import { useContext, useState } from "react";
 import "./Login.css";
+import { ToastContainer, toast } from 'react-toastify';
 import { useNavigate } from "react-router-dom";
 import { UserLoginApi } from "../../Api/UserApi";
 import SetStorage from "../Constent/Storage";
@@ -19,14 +20,33 @@ export default function AuthLogin() {
         console.log(data)
         const res=await UserLoginApi(data)
         if(res.status==="success"){
-            console.log(res)
-            window.alert('successfully login')
+            toast.success( 'Login successfully👌', {
+                position: "top-center",
+                autoClose: 5000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+                theme: "light",
+            })
             SetStorage(res)
             localStorage.setItem("token",res.token)
             login(res)
             setTimeout(()=>{
             naviget('/')
             },2000)
+        }else{
+            toast.error('user is not define!', {
+                position: "top-center",
+                autoClose: 5000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+                theme: "light",
+                });
         }
     }
     return (
@@ -48,7 +68,16 @@ export default function AuthLogin() {
                 </div>
             </div>
 
-
+            <ToastContainer position="top-center"
+                autoClose={5000}
+                hideProgressBar={false}
+                newestOnTop={false}
+                closeOnClick
+                rtl={false}
+                pauseOnFocusLoss
+                draggable
+                pauseOnHover
+                theme="light" />
         </>
     )
 }

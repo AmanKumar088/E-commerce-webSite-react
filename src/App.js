@@ -1,5 +1,6 @@
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import 'react-toastify/dist/ReactToastify.css';
 import { BrowserRouter as Router,Routes,Route } from 'react-router-dom';
 import Dashbord from './Component/Dashbord/Dashbord';
 import SeeMoreProduct from './Component/Dashbord/SeeMoreProduct/SeeMore';
@@ -17,6 +18,7 @@ import Realme from './Component/Dashbord/RealmePhone/Realme';
 import Redmi from './Component/Dashbord/RedmiPhone/Redmi';
 import Iphone from './Component/Dashbord/IphonePhone/Iphone';
 import Oppo from './Component/Dashbord/OppoPhone/Oppo';
+import Placeorder from './Component/Dashbord/AddCart/PlaceOrder/PlaceOrder';
 
 function App() {
   return (
@@ -40,6 +42,7 @@ function App() {
         <Route path='/redmi' element={<Redmi />}></Route>
         <Route path='/iphone' element={<Iphone />}></Route>
         <Route path='/oppo' element={<Oppo />}></Route>
+        <Route path='/placeorder' element={<Placeorder />}></Route>
       </Routes>
       </GetContextData>
     </Router>

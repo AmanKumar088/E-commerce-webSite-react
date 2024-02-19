@@ -1,5 +1,6 @@
 import { useNavigate, useParams } from "react-router-dom";
 import { PublicImg } from "../../Constent/Url";
+import { ToastContainer, toast } from 'react-toastify';
 import Footer from "../Layout/Footer/Footer";
 import Header from "../Layout/Header/Header";
 import "./SingleCart.css"
@@ -29,15 +30,34 @@ export default function SingleCart() {
     const AddCart=async ()=>{
         const ww=await AddCartApi(addcart)
        if(ww.status==="success"){
+        toast.success( 'Add Cart successfully', {
+            position: "top-center",
+            autoClose: 5000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: "light",
+        })
+        // window.alert('add cart successfully')
         setTimeout(()=>{
-            window.alert("add cart successfully")
             navigate('/addcart')
         })
        }else{
+        // window.alert('please login now!')
+        toast.error('please login now!', {
+            position: "top-center",
+            autoClose: 5000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: "light",
+            });
            navigate('/login')
        }
-        
-
     }
     useEffect(()=>{
         singledata()
@@ -90,6 +110,17 @@ export default function SingleCart() {
                     </div>
                 </div> */}
             <Footer />
+
+            <ToastContainer position="top-center"
+                autoClose={5000}
+                hideProgressBar={false}
+                newestOnTop={false}
+                closeOnClick
+                rtl={false}
+                pauseOnFocusLoss
+                draggable
+                pauseOnHover
+                theme="light" />
         </>
     )
 }

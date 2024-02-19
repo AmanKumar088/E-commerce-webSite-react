@@ -4,5 +4,6 @@ export const Route={
     SignupUser:"/admin/signup",
     LoginUser:"/admin/login",
     AddCart:"/cart/addcart",
-    GetCart:"/cart/joincart"
+    GetCart:"/cart/joincart",
+    DeleteCart:"/cart/delete/"
 }

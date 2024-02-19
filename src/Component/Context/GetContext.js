@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { Account } from "./CreateContext";
 import { GetStorage, clearStorage, hasStorage } from "../Constent/Storage";
 import { useNavigate } from "react-router-dom";
+import { ToastContainer, toast } from 'react-toastify';
 
 export default function GetContextData({children}){
 
@@ -27,6 +28,16 @@ export default function GetContextData({children}){
     function logout(){
         clearStorage()
         setData(null)
+        toast.success( 'logout successfully', {
+            position: "top-center",
+            autoClose: 5000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: "light",
+        })
         naviget('/')
     }
 
@@ -44,6 +55,20 @@ export default function GetContextData({children}){
     <Account.Provider value={ContextData}>
         {children}
     </Account.Provider>
+
+
+    <ToastContainer position="top-center"
+                autoClose={5000}
+                hideProgressBar={false}
+                newestOnTop={false}
+                closeOnClick
+                rtl={false}
+                pauseOnFocusLoss
+                draggable
+                pauseOnHover
+                theme="light" />
     </>
+    
+
    )
 }

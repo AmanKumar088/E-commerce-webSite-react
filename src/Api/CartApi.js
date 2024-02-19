@@ -26,3 +26,15 @@ export async function GetCartApi(){
     })
     return await res.json()
 }
+
+export async function DeleteCartApi(id){
+    console.log(id)
+    const res=await fetch(`${ApiUrl}${Route.DeleteCart}${id}`,{
+        method:"delete",
+        headers:{
+            "Content-Type":"application/json",
+            "Authorization":`bearer${GetToken()}`
+        }
+    })
+    return await res.json()
+}

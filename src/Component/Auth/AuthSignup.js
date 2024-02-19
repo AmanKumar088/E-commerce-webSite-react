@@ -3,6 +3,7 @@ import { UserSignupApi } from "../../Api/UserApi"
 import { useNavigate } from "react-router-dom"
 import SetStorage from "../Constent/Storage"
 import { Account } from "../Context/CreateContext"
+import { ToastContainer, toast } from 'react-toastify';
 
 export default function AuthSignup(){
     const [data,setData]=useState({})
@@ -17,15 +18,34 @@ export default function AuthSignup(){
         console.log(data)
         const res= await UserSignupApi(data)
         if(res.status==="success"){
-            console.log(res)
-            window.alert('successfully singup')
+            toast.success( 'signup successfully👌', {
+                position: "top-center",
+                autoClose: 5000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+                theme: "light",
+            })
             SetStorage(res)
             localStorage.setItem("token",res.token)
             signup(res)
-            console.log(res.token)
+            // console.log(res.token)
             setTimeout(()=>{
                 naviget('/')
             },2000)
+        }else{
+            toast.error('user is not define!', {
+                position: "top-center",
+                autoClose: 5000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+                theme: "light",
+                });
         }
 
     }
@@ -53,6 +73,17 @@ export default function AuthSignup(){
              </div>
             </div>
         </div>
+
+        <ToastContainer position="top-center"
+                autoClose={5000}
+                hideProgressBar={false}
+                newestOnTop={false}
+                closeOnClick
+                rtl={false}
+                pauseOnFocusLoss
+                draggable
+                pauseOnHover
+                theme="light" />
         </>
     )
 }

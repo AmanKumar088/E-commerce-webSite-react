@@ -11,7 +11,7 @@ export default function Section() {
 
     const getData = async () => {
         const res = await GetAllProductApi()
-        setData(...data, res.data.slice(0,10))
+        setData(...data, res?.data.slice(0,10))
         console.log(res)
     }
 

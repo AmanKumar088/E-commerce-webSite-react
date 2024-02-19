@@ -10,6 +10,8 @@ import { Account } from '../../../Context/CreateContext';
 export default function Header() {
     const {Logindata,logout}=useContext(Account)
     
+
+   
     return (
         <>
             <div className='contai'>
